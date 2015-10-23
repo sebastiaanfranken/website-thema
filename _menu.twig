@@ -1,0 +1,15 @@
+{% macro display_menu_item(item, loop) %}
+	{% from _self import display_menu_item %}
+	<li {% if item|current %}class="active"{% endif %}>
+		<a href="{{ item.link }}" {% if item.title is defined %}title="{{ item.title|escape }}"{% endif %}>{{ item.label }}</a>
+	</li>
+{% endmacro %}
+
+{% from _self import display_menu_item %}
+<ul>
+	{% for item in menu %}
+	{% if item.label is defined %}
+		{{ display_menu_item(item, loop) }}
+	{% endif %}
+	{% endfor %}
+</ul>

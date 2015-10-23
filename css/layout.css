@@ -1,0 +1,239 @@
+/* ---- HTML elements --- */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+	display: block;
+}
+
+audio, canvas, progress, video {
+	display: inline-block;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+[hidden], template {
+	display: none;
+}
+
+body {
+	background-color: #fff;
+	font-family: "Lora", "Times New Roman", verdana, serif;
+	font-size: 16px;
+	color: #404040;
+	line-height: 1.5;
+}
+
+a {
+	color: #404040;
+	-webkit-transition: color 400ms ease-in-out 0s;
+	-moz-transition: color 400ms ease-in-out 0s;
+	-ms-transition: color 400ms ease-in-out 0s;
+	transition: color 400ms ease-in-out 0s;
+}
+
+a:hover {
+	color: #0ad;
+	text-decoration: none;
+}
+
+p, h1, h2, h3, h4, h5, h6, ul, ol, form, table {
+	margin-bottom: 22px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+	font-weight: 800;
+	line-height: 1.1;
+}
+
+ul {
+	list-style-type: square;
+	margin-left: 20px;
+}
+
+ol {
+	margin-left: 26px;
+}
+
+table {
+	width: 100%;
+}
+
+table thead tr th {
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+table tbody tr td {
+	padding: 5px 15px;
+}
+
+table tbody tr:nth-child(even) td {
+	background: #f4f4f4;
+}
+
+/* --- General tags and classes --- */
+
+.banner {
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	background-color: #f4f4f4;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: 60px;
+}
+
+.banner [class*="col-"] {
+	text-align: center;
+}
+
+/* --- Layout --- */
+
+#site-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 3;
+	font-family: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+	background-color: transparent;
+	border-bottom: 1px solid transparent;
+	-webkit-transform: translate3d(0, 0);
+	-moz-transform: translate3d(0, 0);
+	-ms-transform: translate3d(0, 0);
+	-o-transform: translate3d(0, 0);
+	transform: translate3d(0, 0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transition: background-color 600ms ease-in-out 0s, border-bottom-color 600ms ease-in-out 0s;
+	-moz-transition: background-color 600ms ease-in-out 0s, border-bottom-color 600ms ease-in-out 0s;
+	-ms-transition: background-color 600ms ease-in-out 0s, border-bottom-color 600ms ease-in-out 0s;
+	-o-transition: background-color 600ms ease-in-out 0s, border-bottom-color 600ms ease-in-out 0s;
+	transition: background-color 600ms ease-in-out 0s, border-bottom-color 600ms ease-in-out 0s;
+}
+
+#site-header.detached {
+	border-bottom-color: #f0f0f0;
+	background-color: #fff;
+}
+
+#site-name a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+	line-height: 20px;
+}
+
+#site-name a:hover {
+	color: rgba(255, 255, 255, .8);
+}
+
+#site-header.detached #site-name a {
+	color: #404040;
+}
+
+#site-header.detached #site-name a:hover {
+	color: #0ad;
+}
+
+#site-nav {
+	float: right;
+}
+
+#site-nav ul {
+	list-style: none;
+	margin-bottom: 0;
+}
+
+#site-nav ul li {
+	display: inline-block;
+}
+
+#site-nav ul li a {
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	padding: 20px;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 800;
+	letter-spacing: 1px;
+}
+
+#site-nav ul li.active a,
+#site-nav ul li a:hover {
+	text-decoration: underline;
+}
+
+#site-header.detached #site-nav ul li a {
+	color: #404040;
+}
+
+#site-header.detached #site-nav ul li a:hover {
+	color: #0085a1;
+}
+
+#site-leader {
+	height: 160px;
+	color: #404040;
+}
+
+.page-home #site-leader {
+	height: 420px;
+	background-image: url('../images/filter.svg');
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	margin-bottom: 50px;
+	color: #fff;
+}
+
+#site-leader .grid {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	text-align: center;
+}
+
+.page-home #site-leader .grid {
+	padding-top: 150px;
+	padding-bottom: 150px;
+}
+
+#site-leader h2 {
+	font-size: 50px;
+}
+
+#site-content {
+	padding-bottom: 40px;
+	margin-bottom: 40px;
+}
+
+#site-content article h3 {
+	font-size: 22px;
+}
+
+#site-footer {
+	padding: 50px 0 65px 0;
+	border-top: 1px solid #eee;
+}
+
+#site-footer ul {
+	margin-bottom: 10px;
+	list-style: none;
+	text-align: center;
+}
+
+#site-footer ul li {
+	display: inline-block;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#site-footer p {
+	font-size: 14px;
+	text-align: center;
+	margin-bottom: 0;
+	color: #777;
+}

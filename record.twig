@@ -1,0 +1,17 @@
+{% include '_header.twig' %}
+
+		<div id="site-leader">
+			<div class="grid grid-simple">
+				<h2>{{ record.title }}</h2>
+			</div> <!-- /.grid /.grid-simple -->
+		</div> <!-- /#site-leader -->
+
+		<main id="site-content">
+			<div class="grid">
+				<article>
+					{{ record.body }}
+				</article>
+			</div> <!-- /.grid -->
+		</main> <!-- /#site-content -->
+
+{% include '_footer.twig' %}

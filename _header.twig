@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="{{ htmllang() }}">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<title>{% if record.title is defined %}{{ record.title }} | {% endif %} {{ app.config.get('general/sitename') }}</title>
+		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic|Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic" />
+		<link rel="stylesheet" type="text/css" href="{{ paths.theme }}css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="{{ paths.theme }}css/grid.css" />
+		<link rel="stylesheet" type="text/css" href="{{ paths.theme }}css/layout.css" />
+		<script type="text/javascript" src="{{ paths.theme }}js/theme.js"></script>
+	</head>
+
+	<body class="{% if record.title is defined %}page-{{ record.title|slug }}{% endif %}">
+		<header id="site-header">
+			<div class="grid grid-simple">
+				<div class="col-4-12">
+					<h1 id="site-name">
+						<a href="{{ paths.root }}">{{ app.config.get('general/sitename') }}</a>
+					</h1> <!-- /#site-name -->
+				</div> <!-- /.col-4-12 -->
+
+				<div class="col-8-12">
+					<nav id="site-nav">
+						{{ menu('main', '_menu.twig') }}
+					</nav> <!-- /#site-nav -->
+				</div> <!-- /.col-8-12 -->
+			</div> <!-- /.grid /.grid-simple -->
+		</header> <!-- /#site-header -->

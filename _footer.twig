@@ -1,0 +1,19 @@
+		<footer id="site-footer">
+			<div class="grid">
+				{% if theme.github is not empty %}
+				<ul>
+					<li>
+						<a href="https://www.github.com/{{ theme.github }}" title="GitHub">
+							<span class="fa-stack fa-lg">
+								<span class="fa fa-circle fa-stack-2x"></span>
+								<span class="fa fa-github fa-stack-1x fa-inverse"></span>
+							</span> <!-- /.fa-stack /.fa-lg -->
+						</a>
+					</li>
+				</ul>
+				{% endif %}
+				<p>&copy; Sebastiaan Franken</p>
+			</div> <!-- /.grid -->
+		</footer> <!-- /#site-footer -->
+	</body>
+</html>

@@ -1,0 +1,29 @@
+{% include '_header.twig' %}
+
+		{% if app.config.get('general/payoff') %}
+		<div id="site-leader">
+			<div class="grid grid-simple">
+				<h2>{{ app.config.get('general/payoff') }}</h2>
+			</div> <!-- /.grid /.grid-simple -->
+		</div> <!-- /#site-leader -->
+		{% endif %}
+
+		<main id="site-content">
+			<div class="grid">
+				<article>
+					{{ record.body }}
+				</article>
+			</div> <!-- /.grid -->
+
+			<div class="banner">
+				<div class="grid">
+					{% for icon in theme.technologies %}
+					<div class="col-3-12">
+						<span class="fa fa-{{ icon }} fa-4x"></span>
+					</div> <!-- /.col-3-12 -->
+					{% endfor %}
+				</div> <!-- /.grid -->
+			</div> <!-- /.banner -->
+		</main> <!-- /#site-content -->
+
+{% include '_footer.twig' %}
