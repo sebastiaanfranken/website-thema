@@ -89,6 +89,10 @@ table tbody tr:nth-child(even) td {
 	text-align: center;
 }
 
+.cookiebar {
+	max-width: 1280px;
+}
+
 /* --- Layout --- */
 
 #site-header {
