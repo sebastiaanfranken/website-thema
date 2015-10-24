@@ -10,6 +10,15 @@
 		<link rel="stylesheet" type="text/css" href="{{ paths.theme }}css/grid.css" />
 		<link rel="stylesheet" type="text/css" href="{{ paths.theme }}css/layout.css" />
 		<script type="text/javascript" src="{{ paths.theme }}js/theme.js"></script>
+		{% if theme.externalLinksNewTab == true %}
+		<script type="text/javascript">
+		window.addEventListener('load', function() {
+			Array.prototype.slice.call(document.querySelectorAll('a[href^="http"]')).forEach(function(link) {
+				link.setAttribute('target', '_blank');
+			});
+		}, false);
+		</script>
+		{% endif %}
 	</head>
 
 	<body class="{% if record.title is defined %}page-{{ record.title|slug }}{% endif %}">
@@ -28,3 +37,21 @@
 				</div> <!-- /.col-8-12 -->
 			</div> <!-- /.grid /.grid-simple -->
 		</header> <!-- /#site-header -->
+
+		<div id="site-leader">
+			<div class="grid grid-simple">
+				{% if record.title|slug == "home" and app.config.get("general/payoff") is defined %}
+				<h2>{{ app.config.get("general/payoff") }}</h2>
+				{% elseif record.title is defined %}
+				<h2>{{ record.title }}</h2>
+				{% else %}
+				<h2>{{ slug }}</h2>
+				{% endif %}
+
+				{% if record.contenttype.name in ["Blogs"] %}
+				<hr class="small" />
+				{% set recdate = record.datepublish|localdate("%A %e %B %Y") %}
+			    <p class="meta">Door <em>{{ record.user.displayname }}</em> op {{ recdate }}</p>
+				{% endif %}
+			</div> <!-- /.grid /.grid-simple -->
+		</div> <!-- /#site-leader -->

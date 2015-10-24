@@ -74,6 +74,11 @@ table tbody tr:nth-child(even) td {
 	background: #f4f4f4;
 }
 
+img {
+	max-width: 100%;
+	height: auto;
+}
+
 /* --- General tags and classes --- */
 
 .banner {
@@ -95,6 +100,44 @@ table tbody tr:nth-child(even) td {
 
 .cookiebar {
 	max-width: 1280px;
+}
+
+img.small {
+	max-width: 400px;
+	height: auto;
+}
+
+.pull-left {
+	float: left;
+}
+
+.pull-right {
+	float: right;
+}
+
+img.pull-left {
+	margin-right: 24px;
+}
+
+img.pull-right {
+	margin-left: 24px;
+}
+
+ul.spacious {
+	list-style: square inside;
+}
+
+ul.spacious li {
+	border-bottom: 1px solid #eee;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+hr.small {
+	margin: 20px auto;
+	width: 120px;
+	border: 0;
+	border-bottom: 2px solid #0ad;
 }
 
 /* --- Layout --- */
@@ -184,7 +227,7 @@ table tbody tr:nth-child(even) td {
 }
 
 #site-leader {
-	height: 160px;
+	min-height: 160px;
 	color: #404040;
 }
 

@@ -11,3 +11,6 @@ technologies:
 # A link to your GitHub profile. Should only contain
 # the part after github.com/
 github: sebastiaanfranken
+
+# Open external links in a new browser tab?
+externalLinksNewTab: true
