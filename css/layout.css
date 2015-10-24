@@ -62,12 +62,11 @@ table {
 }
 
 table thead tr th {
-	text-align: left;
 	border-bottom: 1px solid #ddd;
 }
 
 table tbody tr td {
-	padding: 5px 15px;
+	padding: 10px 15px;
 }
 
 table tbody tr:nth-child(even) td {
@@ -166,7 +165,7 @@ hr.small {
 }
 
 #site-header.detached {
-	border-bottom-color: #f0f0f0;
+	border-bottom-color: #e0e0e0;
 	background-color: #fff;
 }
 
@@ -263,6 +262,21 @@ hr.small {
 
 #site-content article h3 {
 	font-size: 22px;
+}
+
+#site-content aside {
+	border: 1px solid #eee;
+	padding: 25px;
+}
+
+#site-content aside > div {
+	border-bottom: 3px solid #eee;
+	margin-bottom: 25px;
+}
+
+#site-content aside > div:last-child {
+	margin-bottom: 0;
+	border-bottom: 0;
 }
 
 #site-footer {

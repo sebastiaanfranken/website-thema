@@ -1,0 +1,34 @@
+{% include '_header.twig' %}
+
+		<main id="site-content">
+			<div class="grid">
+				<article class="col-9-12">
+					{{ record.body }}
+				</article> <!-- /.col-9-12 -->
+
+				<aside class="col-3-12">
+					<div>
+						<h4>Technieken in dit project</h4>
+						<ul>
+							{% for url,techniek in record.taxonomy.technieken %}
+							<li><a href="{{ url }}">{{ techniek }}</a></li>
+							{% endfor %}
+						</ul>
+					</div>
+
+					<div>
+						<h4>Links</h4>
+						<ul>
+							{% if record.url is not empty %}
+							<li><a href="{{ record.url }}">{{ record.url }}</a></li>
+							{% endif %}
+							{% if record.github_url is not empty %}
+							<li><a href="{{ record.github_url }}">Bekijk de code op GitHub</a></li>
+							{% endif %}
+						</ul>
+					</div>
+				</aside> <!-- /.col-3-12 -->
+			</div> <!-- /.grid -->
+		</main> <!-- /#site-content -->
+
+{% include '_footer.twig' %}

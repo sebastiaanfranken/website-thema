@@ -1,5 +1,15 @@
 {% include '_header.twig' with { slug: 'Blogs' } %}
 
-{% include 'listing.twig'  %}
+		<main id="site-content">
+			<div class="grid">
+				<ul class="spacious">
+					{% for record in records %}
+					<li><a href="{{ record.link }}" title="Link naar {{ record.title }}">{{ record.title }}</a></li>
+					{% endfor %}
+				</ul>
+
+				{{ pager() }}
+			</div> <!-- /.grid -->
+		</main> <!-- /#site-content -->
 
 {% include '_footer.twig' %}

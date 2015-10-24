@@ -1,0 +1,36 @@
+{% include '_header.twig' %}
+
+		<main id="site-content">
+			<div class="grid">
+				<article>
+					{{ record.body }}
+
+					{% setcontent projecten = 'projecten' orderby 'title' %}
+					{% if projecten is not empty %}
+					<table cellpadding="0" cellspacing="0" border="0">
+						<thead>
+							<tr>
+								<th>Project</th>
+								<th>Gebruikte techniek(en)</th>
+								<th>CMS?</th>
+								<th>Bijzonderheden</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							{% for project in projecten %}
+							<tr>
+								<td><a href="{{ project.link }}">{{ project.title }}</a></td>
+								<td>{{ project.taxonomy.technieken|join(', ') }}</td>
+								<td>{% if project.cms is not empty %} {{ project.cms }} {% else %} - {% endif %}</td>
+								<td>{% if project.teaser is not empty %} {{ project.teaser|striptags }} {% else %} - {% endif %}</td>
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+					{% endif %}
+				</article>
+			</div> <!-- /.grid -->
+		</main> <!-- /#site-content -->
+
+{% include '_footer.twig' %}
