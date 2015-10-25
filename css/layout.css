@@ -61,12 +61,14 @@ table {
 	width: 100%;
 }
 
-table thead tr th {
-	border-bottom: 1px solid #ddd;
-}
-
+table thead tr th,
 table tbody tr td {
 	padding: 10px 15px;
+}
+
+table thead tr th {
+	border-bottom: 1px solid #ddd;
+	text-align: left;
 }
 
 table tbody tr:nth-child(even) td {

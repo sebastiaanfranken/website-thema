@@ -22,7 +22,7 @@
 	</head>
 
 	<body class="{% if record.title is defined %}page-{{ record.title|slug }}{% endif %}">
-		<header id="site-header">
+		<header id="site-header" {% if paths.currenturl != paths.rooturl %}class="detached"{% endif %}>
 			<div class="grid grid-simple">
 				<div class="col-4-12">
 					<h1 id="site-name">

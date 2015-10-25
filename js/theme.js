@@ -26,8 +26,5 @@ window.addEventListener("load", function() {
 
 		}, false);
 	}
-	else {
-		header.classList.add("detached");
-	}
 
 }, false);
