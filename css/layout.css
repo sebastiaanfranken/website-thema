@@ -321,6 +321,10 @@ hr.small {
 	border-bottom: 0;
 }
 
+#site-content aside > div.techgraph {
+	display: none;
+}
+
 #site-footer {
 	padding: 50px 0 65px 0;
 	border-top: 1px solid #eee;

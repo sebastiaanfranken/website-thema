@@ -12,5 +12,5 @@ technologies:
 # the part after github.com/
 github: sebastiaanfranken
 
-# Open external links in a new browser tab?
-externalLinksNewTab: true
+# GitHub API token
+github_token: 12ffeef44785a0215433cf884faa67e114201d2a

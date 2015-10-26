@@ -16,6 +16,14 @@
 						</ul>
 					</div>
 
+					{% if record.github_url is defined and record.github_url is not empty %}
+					<div class="techgraph">
+						<h4>Techniekgrafiek volgens GitHub</h4>
+						<p>Hover over de grafiek voor meer info</p>
+						<canvas style="width: 100%; height: auto;"></canvas>
+					</div> <!-- /.techgraph -->
+					{% endif %}
+
 					<div>
 						<h4>Links</h4>
 						<ul>

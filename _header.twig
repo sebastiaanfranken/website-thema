@@ -11,14 +11,24 @@
 		<link rel="stylesheet" type="text/css" href="{{ paths.theme }}css/layout.css" />
 		<script type="text/javascript" src="{{ paths.theme }}js/classlist.js"></script>
 		<script type="text/javascript" src="{{ paths.theme }}js/theme.js"></script>
-		{% if theme.externalLinksNewTab == true %}
+		{% if record.github_url is defined and record.github_url is not empty %}
+		<script type="text/javascript" src="{{ paths.theme }}js/github.js"></script>
+		<script type="text/javascript" src="{{ paths.theme }}js/Chart.min.js"></script>
 		<script type="text/javascript">
-		window.addEventListener('load', function() {
-			Array.prototype.slice.call(document.querySelectorAll('a[href^="http"]')).forEach(function(link) {
-				link.setAttribute('target', '_blank');
-			});
-		}, false);
+		var GithubConfig = {
+			token: "{{ theme.github_token }}",
+			repo: "{{ record.github_url|split('/')|last }}"
+		};
+
+		window.ChartColors = {
+			PHP: "#4F5D95",
+			CSS: "#563d7c",
+			ApacheConf: "#ccc",
+			HTML: "#e44b23",
+			JavaScript: "#f1e05a"
+		};
 		</script>
+		<script type="text/javascript" src="{{ paths.theme }}js/techgraph.js"></script>
 		{% endif %}
 	</head>
 
