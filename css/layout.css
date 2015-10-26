@@ -123,20 +123,22 @@ img.small {
 	height: auto;
 }
 
-.pull-left {
-	float: left;
-}
+@media all and (min-width: 768px) {
+	.float-left {
+		float: left;
+	}
 
-.pull-right {
-	float: right;
-}
+	.float-right {
+		float: right;
+	}
 
-img.pull-left {
-	margin-right: 24px;
-}
+	img.float-left {
+		margin-right: 24px;
+	}
 
-img.pull-right {
-	margin-left: 24px;
+	img.float-right {
+		margin-left: 24px;
+	}
 }
 
 ul.spacious {
@@ -369,7 +371,6 @@ hr.small {
 		margin-bottom: 50px;
 	}
 }
-
 
 .page-home #site-leader {
 	background-image: url('../images/filter.svg');
