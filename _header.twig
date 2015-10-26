@@ -35,17 +35,21 @@
 	<body class="{% if record.title is defined %}page-{{ record.title|slug }}{% endif %}">
 		<header id="site-header" {% if paths.currenturl != paths.rooturl %}class="detached"{% endif %}>
 			<div class="grid grid-simple">
-				<div class="col-4-12">
+				<div class="col-6-12">
 					<h1 id="site-name">
 						<a href="{{ paths.root }}">{{ app.config.get('general/sitename') }}</a>
 					</h1> <!-- /#site-name -->
-				</div> <!-- /.col-4-12 -->
+				</div> <!-- /.col-6-12 -->
 
-				<div class="col-8-12">
+				<div class="col-6-12">
+					<input type="checkbox" name="menu-trigger" id="menu-trigger" />
+					<label for="menu-trigger"><span class="fa fa-bars"></span></label>
+
 					<nav id="site-nav">
+						<h2 class="hidden-desktop">Navigatie</h2>
 						{{ menu('main', '_menu.twig') }}
 					</nav> <!-- /#site-nav -->
-				</div> <!-- /.col-8-12 -->
+				</div> <!-- /.col-6-12 -->
 			</div> <!-- /.grid /.grid-simple -->
 		</header> <!-- /#site-header -->
 
