@@ -3,6 +3,10 @@
 		<main id="site-content">
 			<div class="grid">
 				<article>
+					{% if record.use_header == true %}
+					<img src="{{ record.header|image }}" />
+					{% endif %}
+
 					{{ record.body }}
 				</article>
 			</div> <!-- /.grid -->
