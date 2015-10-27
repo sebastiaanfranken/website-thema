@@ -25,7 +25,8 @@ window.addEventListener("load", function() {
 						});
 					}
 
-					document.querySelector('#site-content aside > div.techgraph').style.display = "block";
+					//document.querySelector('#site-content aside > div.techgraph').style.display = "block";
+					document.querySelector('#site-content aside > div.techgraph').style.setProperty("display", "block");
 					var canvas = document.querySelector('#site-content aside > div.techgraph canvas').getContext('2d');
 					var chart = new Chart(canvas).Doughnut(data);
 				}

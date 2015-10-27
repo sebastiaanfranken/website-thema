@@ -46,56 +46,56 @@
 @media all and (min-width: 768px) {
 	[class^="col-"] {
 		float: left;
+		margin-left: 1.6%;
 		min-height: 1px;
-		padding-right: 40px;
 	}
 
-	[class^="col-"]:last-child {
-		padding-right: 0;
+	[class^="col-"]:first-child {
+		margin-left: 0;
 	}
 
 	.col-1-12 {
-		width: 8.333%;
+		width: 6.866%;
 	}
 
 	.col-2-12 {
-		width: 16.666%;
+		width: 15.33%;
 	}
 
 	.col-3-12 {
-		width: 25%;
+		width: 23.8%;
 	}
 
 	.col-4-12 {
-		width: 33.333%;
+		width: 32.26%;
 	}
 
 	.col-5-12 {
-		width: 41.666%;
+		width: 40.73%;
 	}
 
 	.col-6-12 {
-		width: 50%;
+		width: 49.2%;
 	}
 
 	.col-7-12 {
-		width: 58.333%;
+		width: 57.66%;
 	}
 
 	.col-8-12 {
-		width: 66.666%;
+		width: 66.13%;
 	}
 
 	.col-9-12 {
-		width: 75%;
+		width: 74.6%;
 	}
 
 	.col-10-12 {
-		width: 83.333%;
+		width: 83.06%;
 	}
 
 	.col-11-12 {
-		width: 91.666%;
+		width: 91.53%;
 	}
 
 	.col-12-12 {
